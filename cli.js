@@ -1,9 +1,10 @@
+#!/usr/bin/env node
 const { program } = require('commander');
 const api = require('./index.js')
+const pkg = require('./package.json');
 
 program
-  .option('-x, --xxx', 'what the x')
-
+  .version(pkg.version)
 program
   .command('add <taskName>')
   .description('add a task')
@@ -22,11 +23,12 @@ program
   });
 
 if(process.argv.length === 2) {
-    // 说明用户直接运行 node cli.js
-    api.showAll()
+  // 说明用户直接运行 node cli.js
+  api.showAll()
+} else { 
+  program.parse(process.argv);
 }
 // console.log(process.argv)
 
-// program.parse(process.argv);
 // const options = program.opts();
 // console.log(options.add)

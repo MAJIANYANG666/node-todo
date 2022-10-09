@@ -1,6 +1,13 @@
 {
-  "name": "node-todo",
-  "version": "0.0.1",
+  "name": "node-todo-cli-1",
+  "author": "majianyang",
+  "bin": {
+    "t": "cli.js"
+  },
+  "files": [
+    "*.js"
+  ],
+  "version": "0.0.4",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
