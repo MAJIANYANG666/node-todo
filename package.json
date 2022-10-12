@@ -4,6 +4,9 @@
   "bin": {
     "t": "cli.js"
   },
+  "scripts": {
+    "test": "jest"
+  },
   "files": [
     "*.js"
   ],
@@ -13,5 +16,8 @@
   "dependencies": {
     "commander": "^9.4.0",
     "inquirer": "^8.0.0"
+  },
+  "devDependencies": {
+    "jest": "^29.1.2"
   }
 }
